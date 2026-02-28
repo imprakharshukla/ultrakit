@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UltraKit
+
+A batteries-included Next.js 16 starter with shadcn base-nova components and Vercel AI SDK UI elements. Skip the boilerplate, start building.
+
+![UltraKit](public/screenshot.png)
+
+## What's Inside
+
+**30+ UI Components** from [shadcn/ui](https://ui.shadcn.com) (base-nova style) — Accordion, Alert Dialog, Button, Card, Checkbox, Combobox, Command Palette, Context Menu, Dialog, Dropdown Menu, Hover Card, Input, Label, Popover, Progress, Scroll Area, Select, Separator, Skeleton, Tabs, Textarea, Tooltip, and more.
+
+**21 AI Elements** from the [Vercel AI SDK registry](https://sdk.vercel.ai) — Conversation, Message, Prompt Input, Code Block, Reasoning, Chain of Thought, Artifact, Confirmation, Suggestion, Task, Tool, Sources, and more. Everything you need to build AI-powered chat interfaces.
+
+## Stack
+
+- **Next.js 16** with Turbopack
+- **React 19**
+- **Tailwind CSS v4** with `@tailwindcss/typography`
+- **shadcn/ui** (base-nova style) with Phosphor Icons
+- **Vercel AI SDK** (`ai` + `@ai-sdk/react`)
+- **Motion** (Framer Motion) for animations
+- **Shiki** for syntax highlighting
+- **DM Sans** font
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone
+git clone https://github.com/imprakharshukla/ultrakit.git
+cd ultrakit
+
+# Install
+bun install
+
+# Dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.tsx          # Root layout (dark mode, DM Sans)
+    page.tsx            # Demo page
+  components/
+    ui/                 # 30+ shadcn base-nova components
+    ai-elements/        # 21 Vercel AI SDK components
+  lib/
+    utils.ts            # cn() helper
+  styles.css            # Tailwind v4 + theme variables
+components.json         # shadcn config (add more with `bunx shadcn add`)
+```
 
-## Learn More
+## Adding More Components
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Add any shadcn component
+bunx shadcn@latest add [component-name]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Add AI elements
+bunx shadcn@latest add https://registry.ai-sdk.dev/[element-name].json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Theming
 
-## Deploy on Vercel
+Theme variables are defined in `src/styles.css` with light and dark mode support. The default dark theme uses a minimal, high-contrast palette with white primary on dark backgrounds. Edit the CSS variables to customize.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
