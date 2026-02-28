@@ -1,6 +1,6 @@
 # UltraKit
 
-A batteries-included Next.js 16 starter with shadcn base-nova components and Vercel AI SDK UI elements. Skip the boilerplate, start building.
+An opinionated Next.js 16 starter with shadcn base-nova components and Vercel AI SDK UI elements. Built around my personal taste — skip the boilerplate, start building.
 
 ![UltraKit](public/screenshot.png)
 
@@ -65,7 +65,7 @@ bunx shadcn@latest add https://registry.ai-sdk.dev/[element-name].json
 
 ## Theming
 
-Theme variables are defined in `src/styles.css` with light and dark mode support. The default dark theme uses a minimal, high-contrast palette with white primary on dark backgrounds. Edit the CSS variables to customize.
+This is a dark-only starter. Both the "light" and "dark" themes are dark — that's intentional and a personal preference. Theme variables are defined in `src/styles.css`. The dark theme uses a minimal, high-contrast palette with white primary on dark backgrounds. You're free to swap in a proper light theme if that's your thing.
 
 ## License
 
