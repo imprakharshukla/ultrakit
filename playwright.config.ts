@@ -17,7 +17,9 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev -- --port 3100",
+    command: process.env.CI
+      ? "bun run build && bun run start -- --port 3100"
+      : "bun run dev -- --port 3100",
     url: "http://localhost:3100",
     reuseExistingServer: !process.env.CI,
   },
